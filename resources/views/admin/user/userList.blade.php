@@ -135,7 +135,9 @@
 
                 $.ajax({
                     type:'get',
-                    url:'http://localhost:8000/admin/change/role',
+                    // url:'http://localhost:8000/admin/change/role',
+                    url:'/admin/change/role',
+
                     dataType:'json',
                     data:$data,
                     success:function(response){

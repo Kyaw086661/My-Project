@@ -128,7 +128,9 @@
             // increase view count
             $.ajax({
                     type : 'get',
-                    url : 'http://localhost:8000/user/ajax/increase/viewCount',
+                    // url : 'http://localhost:8000/user/ajax/increase/viewCount',
+                    url : '/user/ajax/increase/viewCount',
+
                     data : {'productId' : $('#pizzaId').val()},
                     dataType :'json',
 
@@ -146,17 +148,21 @@
                     'pizzaId': $pizzaId,
                     'userId' : $userId
                 }
-                // console.log($source);
+                console.log($source);
                 $.ajax({
                     type : 'get',
-                    url : 'http://localhost:8000/user/ajax/addToCard',
+                    // url : 'http://localhost:8000/user/ajax/addToCard',
+                    url : '/user/ajax/addToCard',
+
                     data : $source,
                     dataType :'json',
                     success : function(response){
                         // console.log(response);
                         // console.log(response.status)//success
                         if(response.status == 'success'){
-                            window.location.href = "http://localhost:8000/user/homePage";
+                            // window.location.href = "http://localhost:8000/user/homePage";
+                            window.location.href = "/user/homePage";
+
                         }
 
                     }

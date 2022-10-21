@@ -136,7 +136,9 @@
                     // console.log($productId);
                     $.ajax({
                         type:'get',
-                        url:'http://localhost:8000/user/ajax/clear/current/product',
+                        // url:'http://localhost:8000/user/ajax/clear/current/product',
+                        url:'/user/ajax/clear/current/product',
+
                         data:{'productId': $productId, 'cartId' : $cartId},
                         dataType:'json',
                     })
@@ -169,13 +171,17 @@
                     // console.log($orderList);
                     $.ajax({
                         type : 'get',
-                        url :'http://localhost:8000/user/ajax/order',
+                        // url :'http://localhost:8000/user/ajax/order',
+                        url :'/user/ajax/order',
+
                         data: Object.assign({},$orderList),
                         dataType :'json',
                         success : function(response){
                             // console.log(response);
                             if(response.status== 'true'){
-                                window.location.href="http://localhost:8000/user/homePage";
+                                // window.location.href="http://localhost:8000/user/homePage";
+                                window.location.href="/user/homePage";
+
                             }
                         }
                     })
@@ -188,7 +194,9 @@
                         // $('#delivery').html("0 Kyats");
                         $.ajax({
                             type : 'get',
-                            url:'http://localhost:8000/user/ajax/clear/cart',
+                            // url:'http://localhost:8000/user/ajax/clear/cart',
+                            url:'/user/ajax/clear/cart',
+
                             dataType:'jsom',
                         })
 

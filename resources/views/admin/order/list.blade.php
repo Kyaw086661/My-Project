@@ -209,7 +209,9 @@
             // console.log($data);
             $.ajax({
                 type:'get',
-                url:'http://localhost:8000/order/ajax/changeStatus',
+                // url:'http://localhost:8000/order/ajax/changeStatus',
+                url:'/order/ajax/changeStatus',
+
                 data: $data,
                 dataType:'json',
                 success:function(response){

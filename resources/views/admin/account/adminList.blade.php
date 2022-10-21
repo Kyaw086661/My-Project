@@ -142,7 +142,8 @@
             // console.log($changeRole)
             $.ajax({
                 type:'get',
-                url:'http://localhost:8000/admin/ajax/changeRole',
+                url:'/admin/ajax/changeRole',
+                // url:'http://localhost:8000/admin/ajax/changeRole',
                 data:{
                     'role':$changeRole,
                     'userId':$userId,

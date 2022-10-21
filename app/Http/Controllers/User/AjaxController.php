@@ -26,7 +26,7 @@ class AjaxController extends Controller
     }
     //return add to cart
     public function addToCard(Request $request){
-        // logger($request->all());
+        logger($request->all());
         $data = $this->getOrderData($request);
         // logger($data);
         Cart::create($data);
