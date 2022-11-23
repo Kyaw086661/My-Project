@@ -1,22 +1,3 @@
-{{-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>This is user Home</h1>
-   <h3> Role -  {{ Auth::user()->role }}</h3>
-   <H3> Gender - {{ Auth::user()->gender }}</H3>
-
-    <form action="{{ route('logout') }}" method="post">
-        @csrf
-        <input type="submit" value="Logout">
-    </form>
-</body>
-</html> --}}
 @extends('user.layouts.master')
 @section('content')
     <!-- Shop Start -->
@@ -123,7 +104,7 @@
                                 <div class="text-center py-4">
                                     <a class="h6 text-decoration-none text-truncate" href="">{{ $p->name }}</a>
                                     <div class="d-flex align-items-center justify-content-center mt-2">
-                                        <h5>{{ $p->price }} kyats</h5>
+                                        <h5>{{ $p->price }} $</h5>
                                         {{-- <h5>20000 kyats</h5><h6 class="text-muted ml-2"><del>25000</del></h6> --}}
                                     </div>
                                     <div class="d-flex align-items-center justify-content-center mb-1">

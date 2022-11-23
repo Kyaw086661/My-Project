@@ -19,7 +19,7 @@
                        <tr>
                         <td class="align-middle" >{{ $O->created_at->format('d-M-Y') }}</td>
                        <td class="align-middle" >{{ $O->order_code }}</td>
-                       <td class="align-middle " >{{ $O->total_price }} Kyats</td>
+                       <td class="align-middle " >{{ $O->total_price }} $</td>
                        <td class="align-middle" >
                         @if ($O->status == 0)
                             <span class="text-warning"><i class="fa-solid fa-clock-rotate-left me-2"></i> Pending...</span>

@@ -29,7 +29,7 @@
                             <input type="hidden" name="" id="productId" value="{{ $list->product_id }}">
                             <input type="hidden" name="" id="userId" value="{{ $list->user_id }}">
                         </td>
-                        <td class="align-middle" id="price">{{ $list->pizza_price }}Kyats</td>
+                        <td class="align-middle" id="price">{{ $list->pizza_price }}$</td>
                         <td class="align-middle">
                             <div class="input-group quantity mx-auto" style="width: 100px;">
                                 <div class="input-group-btn">
@@ -45,7 +45,7 @@
                                 </div>
                             </div>
                         </td>
-                        <td class="align-middle col-3" id="total">{{ $list->pizza_price * $list->qty }} Kyats</td>
+                        <td class="align-middle col-3" id="total">{{ $list->pizza_price * $list->qty }} $</td>
                         <td class="align-middle"><button class="btn btn-sm btn-danger btnRemove" id="btnRemove"><i class="fa fa-times"></i></button></td>
                     </tr>
                        @endforeach
@@ -58,17 +58,17 @@
                     <div class="border-bottom pb-2">
                         <div class="d-flex justify-content-between mb-3">
                             <h6>Subtotal</h6>
-                            <h6 id="subTotal">{{ $totalPrice }} Kyats</h6>
+                            <h6 id="subTotal">{{ $totalPrice }} $</h6>
                         </div>
                         <div class="d-flex justify-content-between">
                             <h6 class="font-weight-medium">Delivery</h6>
-                            <h6 class="font-weight-medium" id="delivery">2500 Kyats</h6>
+                            <h6 class="font-weight-medium" id="delivery">10 $</h6>
                         </div>
                     </div>
                     <div class="pt-2">
                         <div class="d-flex justify-content-between mt-2">
                             <h5>Total</h5>
-                            <h5 id="finalTotal">{{ $totalPrice + 2500 }} Kyats</h5>
+                            <h5 id="finalTotal">{{ $totalPrice + 10 }} $</h5>
                         </div>
                         <button class="btn btn-block btn-primary font-weight-bold my-3 py-2" id="orderId">
                             <span class="text-white">Proceed To Checkout</span>
@@ -92,13 +92,13 @@
                     // mouseleave //
                     // console.log('Plus');
                     $parentNote = $(this).parents("tr");
-                    $price = Number($parentNote.find('#price').text().replace('Kyats',''));
+                    $price = Number($parentNote.find('#price').text().replace('$',''));
                     $qty = Number($parentNote.find('#qty').val());
                     $total=$price*$qty;
                     // console.log($price);
                     // console.log($total);
                     // console.log($price +" "+ $qty);
-                    $parentNote.find('#total').html($total+"Kyats");
+                    $parentNote.find('#total').html($total+"$");
                     summaryCalculation()
                 //     $totalPrice= 0;
                 // $('#dataTable tr').each(function(index,row){
@@ -115,11 +115,11 @@
                 $('.btn-minus').click(function(){
                     // console.log('minus');
                     $parentNote = $(this).parents("tr");
-                    $price= Number($parentNote.find('#price').text().replace('Kyats',''));//text ,html val get
+                    $price= Number($parentNote.find('#price').text().replace('$',''));//text ,html val get
                     $qty = $parentNote.find('#qty').val();
                     // console.log($price)
                     $total = $price * $qty;
-                    $parentNote.find('#total').html($total+"Kyats");
+                    $parentNote.find('#total').html($total+"$");
                     summaryCalculation()
                     // $totalPrice= 0;
                     // $('#dataTable tr').each(function(index,row){
@@ -163,7 +163,7 @@
                             'user_id' : $(row).find('#userId').val(),
                             'product_id' : $(row).find('#productId').val(),
                             'qty' : $(row).find('#qty').val(),
-                            'total' : $(row).find('#total').text().replace('Kyats','')*1,
+                            'total' : $(row).find('#total').text().replace('$','')*1,
                             'order_code' : 'POS'+ $random,
 
                         });
@@ -189,8 +189,8 @@
                  // clear order from cart
                  $('#clearBtn').click(function(){
                         $('#dataTable tbody tr').remove();
-                        $('#subTotal').html("0 Kyats");
-                        $('#finalTotal').html("2500 Kyats");
+                        $('#subTotal').html("0 $");
+                        $('#finalTotal').html("10 $");
                         // $('#delivery').html("0 Kyats");
                         $.ajax({
                             type : 'get',
@@ -209,10 +209,10 @@
                 function summaryCalculation(){
                     $totalPrice= 0;
                     $('#dataTable tbody tr').each(function(index,row){
-                       $totalPrice += Number($(row).find('#total').text().replace("Kyats",""));
+                       $totalPrice += Number($(row).find('#total').text().replace("$",""));
                     })
-                    $('#subTotal').html(`${$totalPrice} Kyats`);
-                    $('#finalTotal').html(`${$totalPrice + 2500} Kyats`)
+                    $('#subTotal').html(`${$totalPrice} $`);
+                    $('#finalTotal').html(`${$totalPrice + 10} $`)
                 }
             })
         </script>

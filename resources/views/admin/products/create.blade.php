@@ -23,7 +23,7 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="" class="control-label mb-1">Name</label>
-                                    <input id="cc-pament" name="pizzaName" type="text" value="{{ old('pizzaName') }}" class="form-control @error('pizzaName') is-invalid @enderror" aria-required="true" aria-invalid="false" placeholder="Enter Pizza Name...">
+                                    <input id="cc-pament" name="pizzaName" type="text" value="{{ old('pizzaName') }}" class="form-control @error('pizzaName') is-invalid @enderror" aria-required="true" aria-invalid="false" placeholder="Enter Product Name...">
                                     @error('pizzaName')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="" class="control-label mb-1">Price</label>
-                                    <input id="cc-pament" name="pizzaPrice" type="number" value="{{ old('pizzaPrice') }}" class="form-control  @error('pizzaPrice') is-invalid @enderror" aria-required="true" aria-invalid="false" placeholder="Enter Pizza Price...">
+                                    <input id="cc-pament" name="pizzaPrice" type="number" value="{{ old('pizzaPrice') }}" class="form-control  @error('pizzaPrice') is-invalid @enderror" aria-required="true" aria-invalid="false" placeholder="Enter Product Price...">
                                     @error('pizzaPrice')
                                     <div class="invalid-feedback">
                                         {{ $message }}

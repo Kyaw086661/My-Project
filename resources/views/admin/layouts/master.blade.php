@@ -17,7 +17,8 @@
     <link href="{{ asset('admin/vendor/font-awesome-4.7/css/font-awesome.min.css') }}" rel="stylesheet" media="all">
     <link href="{{ asset('admin/vendor/font-awesome-5/css/fontawesome-all.min.css') }}" rel="stylesheet" media="all">
     <link href="{{ asset('admin/vendor/mdi-font/css/material-design-iconic-font.min.css') }}" rel="stylesheet" media="all">
-
+    {{-- font awresome  --}}
+    <link rel="stylesheet" href="{{ asset('font-awsome/css/all.min.css') }}">
     <!-- Bootstrap CSS-->
     <link href="{{ asset('admin/vendor/bootstrap-4.1/bootstrap.min.css') }}" rel="stylesheet" media="all">
 
@@ -55,23 +56,23 @@
 
                         <li>
                             <a href="{{ route('category#list') }}">
-                                <i class="fas fa-chart-bar"></i>Category</a>
+                                <i class="fas fa-chart-bar me-2"></i>Category</a>
                         </li>
                         <li>
                             <a href="{{ route('products#listPage') }}">
-                                <i class="fa-solid fa-pizza-slice"></i> Products </a>
+                                <i class="fa-brands fa-product-hunt me-2"></i> Products </a>
                         </li>
                         <li>
                             <a href="{{ route('order#list') }}">
-                                <i class="fa-solid fa-list-check"></i> Order Lists</a>
+                                <i class="fa-solid fa-list-check me-2"></i> Order Lists</a>
                         </li>
                         <li>
                             <a href="{{ route('admin#userList') }}">
-                                <i class="fa-solid fa-users"></i>User Lists</a>
+                                <i class="fa-solid fa-users me-2"></i>User Lists</a>
                         </li>
                         <li>
                             <a href="{{ route('admin#userContact') }}">
-                                <i class="fa-solid fa-envelope-open-text"></i>Customers Message</a>
+                                <i class="fa-solid fa-envelope-open-text me-2"></i>Customers Message</a>
                         </li>
 
                     </ul>
@@ -87,12 +88,6 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
-                            {{-- <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
-                                <button class="au-btn--submit" type="submit">
-                                    <i class="zmdi zmdi-search"></i>
-                                </button>
-                            </form> --}}
                             <span class="form-header">
                                 <h4>Admin Desboard Panel</h4>
                             </span>
@@ -107,47 +102,6 @@
                             @endif
 
                             <div class="header-button">
-                                {{-- <div class="noti-wrap">
-                                    <div class="noti__item js-item-menu">
-                                        <i class="zmdi zmdi-notifications"></i>
-                                        <span class="quantity">3</span>
-                                        <div class="notifi-dropdown js-dropdown">
-                                            <div class="notifi__title">
-                                                <p>You have 3 Notifications</p>
-                                            </div>
-                                            <div class="notifi__item">
-                                                <div class="bg-c1 img-cir img-40">
-                                                    <i class="zmdi zmdi-email-open"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>You got a email notification</p>
-                                                    <span class="date">April 12, 2018 06:50</span>
-                                                </div>
-                                            </div>
-                                            <div class="notifi__item">
-                                                <div class="bg-c2 img-cir img-40">
-                                                    <i class="zmdi zmdi-account-box"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>Your account has been blocked</p>
-                                                    <span class="date">April 12, 2018 06:50</span>
-                                                </div>
-                                            </div>
-                                            <div class="notifi__item">
-                                                <div class="bg-c3 img-cir img-40">
-                                                    <i class="zmdi zmdi-file-text"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <p>You got a new file</p>
-                                                    <span class="date">April 12, 2018 06:50</span>
-                                                </div>
-                                            </div>
-                                            <div class="notifi__footer">
-                                                <a href="#">All notifications</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> --}}
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
@@ -237,7 +191,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
 {{-- font awresome  --}}
-<script src="https://kit.fontawesome.com/75607c027f.js" crossorigin="anonymous"></script>
+<script src="{{ asset('font-awsome/js/all.min.js') }}"></script>
+{{-- <script src="https://kit.fontawesome.com/75607c027f.js" crossorigin="anonymous"></script> --}}
 
 <!-- Jquery JS-->
     <script src="{{ asset('admin/vendor/jquery-3.2.1.min.js')}}"></script>

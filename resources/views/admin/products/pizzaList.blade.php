@@ -77,10 +77,10 @@
                             <tr class="tr-shadow">
                                 <td class="col-2"><img src="{{ asset('storage/'. $pizza->image) }}" class="img-thumbnail shadow-sm" alt=""></td>
                                 <td>{{ $pizza->name }}</td>
-                                <td>{{ $pizza->price }} Kyats</td>
+                                <td>{{ $pizza->price }} $</td>
                                 <td>{{ $pizza->category_name }}</td>
                                 <td><i class="fa-solid fa-eye"></i> {{ $pizza->view_count }}</td>
-                                <td>{{ $pizza->waiting_time }} mins</td>
+                                <td>{{ $pizza->waiting_time }} weeks</td>
                                 <td>
                                     <div class="table-data-feature">
 

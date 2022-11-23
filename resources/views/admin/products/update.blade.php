@@ -71,7 +71,7 @@
                                         </div>
                                          <div class="form-group">
                                             <label for="" class="control-label mb-1">Waiting Time</label>
-                                            <input id="cc-pament" name="pizzaWaitingTime" type="number" value="{{ old('pizzaWaitingTime', $pizza->waiting_time) }}" class="form-control @error('pizzaWaitingTime') is-invalid @enderror" aria-required="true" aria-invalid="false" placeholder="Enter pizza pizzaWaitingTime...">
+                                            <input id="cc-pament" name="pizzaWaitingTime" type="number" value="{{ old('pizzaWaitingTime', $pizza->waiting_time) }}" class="form-control @error('pizzaWaitingTime') is-invalid @enderror" aria-required="true" aria-invalid="false" placeholder="Enter WaitingTime...">
                                             @error('pizzaWaitingTime')
                                             <div class="invalid-feedback">
                                                 {{ $message }}

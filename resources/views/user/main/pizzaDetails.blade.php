@@ -21,16 +21,9 @@
                 <input type="hidden" name="" value="{{ Auth::user()->id }}" id="userId">
                 <input type="hidden" name="" value="{{ $pizza->id }}" id="pizzaId">
                 <div class="d-flex mb-3">
-                    {{-- <div class="text-primary mr-2">
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star-half-alt"></small>
-                        <small class="far fa-star"></small>
-                    </div> --}}
                     <small class="pt-1"><i class="fa-solid fa-eye me-2"></i>{{ $pizza->view_count + 1 }} </small>
                 </div>
-                <h3 class="font-weight-semi-bold mb-4">{{ $pizza->price }} Kyats</h3>
+                <h3 class="font-weight-semi-bold mb-4">{{ $pizza->price }} $</h3>
                 <p class="mb-4">{{ $pizza->description }}</p>
                 <div class="d-flex align-items-center mb-4 pt-2">
                     <div class="input-group quantity mr-3" style="width: 130px;">
