@@ -56,7 +56,7 @@ class AjaxController extends Controller
         Order::create([
             'user_id' => Auth::user()->id,
             'order_code' => $data->order_code,
-            'total_price' => $total+2500,
+            'total_price' => $total+10,
         ]);
         return response()->json([
             'message'=>'order complete',

@@ -94,7 +94,7 @@
                                 <td>{{ $O->user_name }}</td>
                                 <td>{{ $O->created_at->format('d-M-Y') }}</td>
                                 <td><a href="{{ route('order#listCode',$O->order_code) }}" class="text-primary text-decoration-none">{{ $O->order_code }}</a></td>
-                                <td class="amount">{{ $O->total_price }} Kyats</td>
+                                <td class="amount">{{ $O->total_price }} $</td>
                                 <td>
                                     <select name="status" id="" class="form-control changeStatus">
                                         <option value="0" class="text-danger" @if($O->status == 0) selected @endif>Pending</option>
